@@ -99,15 +99,13 @@
             </li>
            
            <li class="list-inline-item">
-              <button onclick="document.querySelector('body').style.backgroundColor='black';
-                               document.querySelector('body').style.color='white';
-                               document.querySelector('.DayNNightAdjcolor').style.color='white';">Night</button>
+              <button onclick="changeColor('Night');">Night
+                             </button>
            </li>
            
            <li class="list-inline-item">
-              <button onclick="document.querySelector('body').style.backgroundColor='white';
-                               document.querySelector('body').style.color='#868e96';
-                               document.querySelector('.DayNNightAdjcolor').style.color='#343a40';">Day</button>
+              <button onclick="changeColor('Day');">Day
+                             </button>
            </li>
           
           </ul>
@@ -116,11 +114,13 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
         <div class="my-auto">
-          <h2 class="mb-5"><span class="DayNNightAdjcolor">Experience</span></h2>
+          <h2 class="mb-5"><span class="DayNNightAdjcolor">Experience</span>
+          </h2>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0"><span class="DayNNightAdjcolor">Japanese Guide</span></h3>
+              <h3 class="mb-0"><span class="DayNNightAdjcolor">Japanese Guide</span>
+              </h3>
               <div class="subheading mb-3">Part-Time Job</div>
               <p>When I retired from army, I worked part-time as a part-time worker, and realized how difficult it was to lead a group of people.</p>
             </div> 
@@ -131,7 +131,8 @@
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0"><span class="DayNNightAdjcolor">Army 6th Division G.O.P</span></h3>
+              <h3 class="mb-0"><span class="DayNNightAdjcolor">Army 6th Division G.O.P</span>
+              </h3>
               <div class="subheading mb-3">Compulsory military service</div>
               <p>I still don't understand why I went to the forefront, but it was a good experience.</p>
             </div>
@@ -142,7 +143,8 @@
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
-              <h3 class="mb-0"><span class="DayNNightAdjcolor">Defense industry firm</span></h3>
+              <h3 class="mb-0"><span class="DayNNightAdjcolor">Defense industry firm</span>
+              </h3>
               <div class="subheading mb-3">Full-time employee</div>
               <p>Based on the inspection of the goods, the basis of the basic life of the workplace was felt, and it was the experience to raise funds.</p>
             </div>
@@ -157,7 +159,8 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
         <div class="my-auto">
-          <h2 class="mb-5"><span class="DayNNightAdjcolor">Education</span></h2>
+          <h2 class="mb-5"><span class="DayNNightAdjcolor">Education</span>
+          </h2>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-content mr-auto">
@@ -184,7 +187,8 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
         <div class="my-auto">
-          <h2 class="mb-5"><span class="DayNNightAdjcolor">Skills</span></h2>
+          <h2 class="mb-5"><span class="DayNNightAdjcolor">Skills</span>
+          </h2>
 
           <div class="subheading mb-3">Programming Languages &amp; Tools</div>
           <ul class="list-inline list-icons">
@@ -225,7 +229,8 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
         <div class="my-auto">
-          <h2 class="mb-5"><span class="DayNNightAdjcolor">Interests</span></h2>
+          <h2 class="mb-5"><span class="DayNNightAdjcolor">Interests</span>
+          </h2>
           <p>I am very interested in Japan. I am interested in Japanese politics, history, economy etc. And I like to travel to Japan, so I go to Japan two or three times a year.</p>
           <p class="mb-0">Therefore, I like to collect all kinds of cute items such as local products and character goods that have been traveling abroad.</p>
         </div>
@@ -233,7 +238,8 @@
 
       <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
         <div class="my-auto">
-          <h2 class="mb-5"><span class="DayNNightAdjcolor">License &amp; Certifications</span></h2>
+          <h2 class="mb-5"><span class="DayNNightAdjcolor">License &amp; Certifications</span>
+          </h2>
           <ul class="fa-ul mb-0">
             <li>
               <i class="fa-li fa fa-trophy text-warning"></i>
@@ -268,6 +274,32 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/resume.min.js"></script>
+
+    <script>
+      function changeColor(input){
+        //input이 뭘로 들어가냐에 따라 실행되는 코드가 달라진다.
+        if (input =='Day') {
+          document.querySelector('body').style.backgroundColor='white';
+          document.querySelector('body').style.color='#868e96';
+          var x = document.getElementsByClassName('DayNNightAdjcolor');
+          console.log("x.length : " + x.length);
+          for (i = 0; i < x.length; i++){
+            x[i].style.color='black';
+          }
+
+        } else if (input =='Night'){
+          document.querySelector('body').style.backgroundColor='black';
+          document.querySelector('body').style.color='white';
+          var y = document.getElementsByClassName('DayNNightAdjcolor');
+          console.log("y.length : " + y.length);
+          for (i = 0; i < y.length; i++){
+            y[i].style.color='white';
+          }
+        }
+
+      }
+    </script>
+
 
   </body>
 
